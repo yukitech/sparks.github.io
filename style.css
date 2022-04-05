@@ -51,7 +51,7 @@ header .wrapper {
 }
 .img-slide {
   border-radius: 8%;
-  z-index: 1;
+  z-index: 5;
   width: 1200px;
   height: 600px;
   overflow: hidden;
