@@ -47,7 +47,7 @@ header .wrapper {
 }
 .fa-bars {
   font-size: 45px;
-  padding: 18px 40px 18px 0;
+  margin: 18px 40px 18px 0;
 }
 .img-slide {
   border-radius: 8%;
@@ -227,27 +227,26 @@ footer .page-title {
 
 @media screen and (max-width:600px) {
   .wrapper {
-    max-width: 400px;
+    max-width: 500px;
   }
   header {
     width: auto;
-    height: 140px;
+    height: 120px;
   }
   .header {
     max-width: 600px;
   }
   .img-slide {
-    width: 400px;
-    height: 200px;
-    -webkit-appearance: none;
+    width: 500px;
+    height: 300px;
   }
   .slider-item {
-    width: 400px;
+    width: 500px;
     float: left;
   }
   .slider-item img {
     object-fit: cover;
-    height: 200px;
+    height: 300px;
   }
   .slide-inner {
     width: 300%;
@@ -258,10 +257,10 @@ footer .page-title {
     transform: translateX(0);
     }
     33% {
-    transform: translateX(-400px);
+    transform: translateX(-500px);
     }
     66% {
-    transform: translateX(-800px);
+    transform: translateX(-1000px);
     }
     100% {
     transform: translateX(0);
@@ -273,7 +272,7 @@ footer .page-title {
   .main-title::before,.main-title::after {
     border-top: 3px solid #D0CECE;
     content: "";
-    width: 100px;
+    width: 150px;
   }
   .About p {
     font-size: 20px;
@@ -342,11 +341,110 @@ footer .page-title {
     font-size: 25px;
   }
   .SNS {
-    width: 100px;
+    width: 200px;
     font-size: 15px;
     padding-top: 15px;
   }
   .SNS .fa,.fa-brands {
+    font-size: 20px;
+  }
+  .SNS-title {
+    text-align: center;
+  }
+}
+@media screen and (max-width:375px) {
+  .wrapper {
+    max-width: 375px;
+    padding: 0 10px;
+  }
+  header {
+    width: auto;
+    height: 110px;
+  }
+  .header {
+    max-width: 600px;
+  }
+  .img-slide {
+    width: 300px;
+    height: 200px;
+  }
+  .slider-item {
+    width: 300px;
+    float: left;
+  }
+  .slider-item img {
+    object-fit: cover;
+    height: 200px;
+  }
+  .slide-inner {
+    width: 300%;
+    animation: img-slide 20s infinite ease;
+  }
+  @keyframes img-slide {
+    0% {
+    transform: translateX(0);
+    }
+    33% {
+    transform: translateX(-300px);
+    }
+    66% {
+    transform: translateX(-600px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+  }
+  .main-title {
+    font-size: 23px;
+  }
+  .main-title::before,.main-title::after {
+    border-top: 3px solid #D0CECE;
+    content: "";
+    width: 80px;
+  }
+  .About p {
+    font-size: 18px;
+    width: 280px;
+    line-height: 28px;
+  }
+  .Event .main-title::before{
+    width: 90px;
+  }
+  .Event .main-title::after {
+    width: 90px;
+  }
+  .Contact .main-title::before{
+    width: 130px;
+  }
+  .Contact .main-title::after {
+    width: 130px;
+  }
+  .Contact-inner {
+    width: 300px;
+  }
+  .contact-account {
+    width: 300px;
+    height: 120px;
+  }
+  .contact-account ul {
+    width: 300px;
+    margin-top: 30px;
+  }
+  .contact-account li h3 {
+    font-size: 18px;
+  }
+  .contact-account li p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  footer {
+    width: auto;
+  }
+  footer .page-title {
+    font-size: 10px;
+    padding: 30px 0;
+  }
+  footer .page-title span {
     font-size: 20px;
   }
 }
