@@ -239,6 +239,7 @@ footer .page-title {
   .img-slide {
     width: 400px;
     height: 200px;
+    -webkit-appearance: none;
   }
   .slider-item {
     width: 400px;
