@@ -258,10 +258,10 @@ footer .page-title {
     transform: translateX(0);
     }
     33% {
-    transform: translateX(-500px);
+    transform: translateX(-400px);
     }
     66% {
-    transform: translateX(-1000px);
+    transform: translateX(-800px);
     }
     100% {
     transform: translateX(0);
