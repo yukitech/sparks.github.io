@@ -352,9 +352,9 @@ footer .page-title {
     text-align: center;
   }
 }
-@media screen and (max-width:375px) {
+@media screen and (max-width:414px) {
   .wrapper {
-    max-width: 375px;
+    max-width: 414px;
     padding: 0 10px;
   }
   header {
