@@ -51,7 +51,6 @@ header .wrapper {
 }
 .img-slide {
   border-radius: 8%;
-  position: relative;
   z-index: 1;
   width: 1200px;
   height: 600px;
@@ -227,28 +226,28 @@ footer .page-title {
   padding: 5px 0;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:770px) {
   .wrapper {
-    max-width: 500px;
+    max-width: 650px;
   }
   header {
     width: auto;
     height: 120px;
   }
   .header {
-    max-width: 600px;
+    max-width: 770px;
   }
   .img-slide {
-    width: 500px;
-    height: 300px;
+    width: 600px;
+    height: 400px;
   }
   .slider-item {
-    width: 500px;
+    width: 600px;
     float: left;
   }
   .slider-item img {
     object-fit: cover;
-    height: 300px;
+    height: 400px;
   }
   .slide-inner {
     width: 300%;
@@ -259,10 +258,10 @@ footer .page-title {
     transform: translateX(0);
     }
     33% {
-    transform: translateX(-500px);
+    transform: translateX(-600px);
     }
     66% {
-    transform: translateX(-1000px);
+    transform: translateX(-1200px);
     }
     100% {
     transform: translateX(0);
@@ -274,12 +273,12 @@ footer .page-title {
   .main-title::before,.main-title::after {
     border-top: 3px solid #D0CECE;
     content: "";
-    width: 150px;
+    width: 200px;
   }
   .About p {
-    font-size: 20px;
-    width: 350px;
-    line-height: 32px;
+    font-size: 25px;
+    width: 460px;
+    line-height: 38px;
   }
   .Event ul {
     flex-direction: column;
@@ -291,8 +290,8 @@ footer .page-title {
     line-height: 24px;
   }
   .Event img {
-    width: 250px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   }
   .Event .more {
     margin: 20px auto 0 auto;
@@ -302,10 +301,10 @@ footer .page-title {
     line-height: 40px;
   }
   .Contact .main-title::before{
-    width: 150px;
+    width: 250px;
   }
   .Contact .main-title::after {
-    width: 150px;
+    width: 250px;
   }
   .Contact-inner {
     flex-direction: column;
@@ -331,7 +330,7 @@ footer .page-title {
     line-height: 30px;
   }
   .Twitter {
-    width: 300px;
+    width: 400px;
     padding-right: 0;
     margin: 0 auto;
   }
