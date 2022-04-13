@@ -226,28 +226,28 @@ footer .page-title {
   padding: 5px 0;
 }
 
-@media screen and (max-width:770px) {
+@media screen and (max-width:960px) {
   .wrapper {
-    max-width: 650px;
+    max-width: 830px;
   }
   header {
     width: auto;
     height: 120px;
   }
   .header {
-    max-width: 770px;
+    max-width: 960px;
   }
   .img-slide {
-    width: 600px;
-    height: 400px;
+    width: 800px;
+    height: 500px;
   }
   .slider-item {
-    width: 600px;
+    width: 800px;
     float: left;
   }
   .slider-item img {
     object-fit: cover;
-    height: 400px;
+    height: 500px;
   }
   .slide-inner {
     width: 300%;
@@ -258,10 +258,10 @@ footer .page-title {
     transform: translateX(0);
     }
     33% {
-    transform: translateX(-600px);
+    transform: translateX(-800px);
     }
     66% {
-    transform: translateX(-1200px);
+    transform: translateX(-1600px);
     }
     100% {
     transform: translateX(0);
@@ -273,7 +273,7 @@ footer .page-title {
   .main-title::before,.main-title::after {
     border-top: 3px solid #D0CECE;
     content: "";
-    width: 200px;
+    width: 250px;
   }
   .About p {
     font-size: 25px;
@@ -301,10 +301,10 @@ footer .page-title {
     line-height: 40px;
   }
   .Contact .main-title::before{
-    width: 250px;
+    width: 300px;
   }
   .Contact .main-title::after {
-    width: 250px;
+    width: 300px;
   }
   .Contact-inner {
     flex-direction: column;
