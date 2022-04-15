@@ -173,6 +173,9 @@ footer .page-title {
   .drawer-btn {
     right: 115px;
   }
+  main {
+    height: 600px;
+  }
   .main-title {
     font-size: 25px;
   }
