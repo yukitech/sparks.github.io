@@ -79,7 +79,7 @@ header .wrapper {
   transition: 0.3s;
 }
 .drawer-btn {
-  transform: scale(3);
+  transform: scale(10);
   position: absolute;
   z-index: 110;
   top: 30px;
@@ -200,6 +200,16 @@ footer .page-title {
   }
   .header {
     max-width: 960px;
+  }
+  .menu {
+    height: 1200px;
+  }
+  .menu ul {
+    padding-top: 250px;
+  }
+  .drawer-btn:checked ~ .menu{
+    transform: translateY(0);
+    transition: 0.5s;
   }
   .drawer-btn {
     right: 115px;
