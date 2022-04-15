@@ -1,0 +1,311 @@
+html {
+  font-size: 100%;
+}
+body {
+  color: black;
+  width: 100%;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+.wrapper {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  height: 100px;
+}
+.header {
+  background-color: #FBAA31;
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  z-index: 100;
+}
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.page-title {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+}
+.page-title span {
+  font-size: 38px;
+}
+.fa-bars {
+  font-size: 45px;
+  margin: 18px 40px 18px 0;
+}
+.menu {
+  background-color: #FBAA31;
+  width: auto;
+  height: 800px;
+  transform: translateY(-100%);
+  position: relative;
+  z-index: 10;
+  transition: 0.5s;
+}
+.menu ul {
+  padding-top: 100px;
+}
+.menu li {
+  text-align: center;
+}
+.menu a {
+  font-size: 70px;
+  color: white;
+  line-height: 110px;
+}
+.menu a:hover {
+  border-bottom: 5px solid white;
+  transition: 0.3s;
+}
+.drawer-btn {
+  transform: scale(3);
+  position: absolute;
+  z-index: 110;
+  top: 30px;
+  right: 170px;
+  opacity: 0;
+}
+.drawer-btn:checked ~ .menu{
+  transform: translateY(10%);
+  transition: 0.5s;
+}
+main {
+  margin-top: 50px;
+}
+.main-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #6E6E6E;
+}
+.main-title::before,.main-title::after {
+  border-top: 3px solid #D0CECE;
+  content: "";
+  width: 400px;
+}
+.main-title::before {
+  margin-right: 10px; 
+}
+.main-title::after {
+  margin-left: 10px; 
+}
+.About {
+  margin-bottom: 150px;
+}
+.About p {
+  font-size: 24px;
+  width: 800px;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  line-height: 40px;
+  margin: 20px auto 0 auto;
+}
+.ActiveDate ul {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  width: 800px;
+  margin: 50px auto 0 auto;
+}
+.ActiveDate li {
+  font-size: 24px;
+  line-height: 35px;
+  background: url(img/frisbeeIcon.png) left 0px top 4px no-repeat;
+  padding-left: 50px;
+  background-size: 50px auto;
+}
+.ActiveDate span img {
+  width: 80px;
+}
+video {
+  width: 700px;
+  margin: 80px 0 0 240px;
+  border-radius: 8%;
+  position: relative;
+  z-index: 1;
+}
+footer {
+  background-color: #FFF2C1;
+  margin-top: 50px;
+}
+footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+footer .page-title {
+  color: black;
+  padding: 24px 0;
+}
+.SNS {
+  padding-top: 10px;
+  width: 300px;
+  font-size: 20px;
+}
+.SNS ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+.SNS .fa,.fa-brands {
+  font-size: 30px;
+  padding-left: 20px;
+}
+.SNS .fa-instagram {
+  padding-left: 35px;
+  color: #CF2E92;
+}
+.SNS .fa-twitter {
+  color: #1DA1F2;
+}
+.SNS .fa-tiktok {
+  color: #000000;
+}
+.SNS .SNS-title {
+  font-weight: 550;
+}
+.copy-write {
+  background-color: #F46300;
+  text-align: center;
+  padding: 5px 0;
+}
+
+@media screen and (max-width:960px) {
+  .wrapper {
+    max-width: 830px;
+  }
+  header {
+    width: auto;
+    height: 120px;
+  }
+  .header {
+    max-width: 960px;
+  }
+  .drawer-btn {
+    right: 115px;
+  }
+  .main-title {
+    font-size: 25px;
+  }
+  .main-title::before,.main-title::after {
+    border-top: 3px solid #D0CECE;
+    content: "";
+    width: 200px;
+  }
+  .About p {
+    font-size: 22px;
+    width: 460px;
+    line-height: 30px;
+  }
+  video {
+    width: 500px;
+    margin: 80px 0 0 120px;
+  }
+  .ActiveDate ul {
+    width: 600px;
+  }
+  .ActiveDate li {
+    font-size: 22px;
+  }
+  footer .page-title {
+    font-size: 14px;
+    padding: 25px 0;
+  }
+  footer .page-title span {
+    font-size: 25px;
+  }
+  .SNS {
+    width: 200px;
+    font-size: 15px;
+    padding-top: 15px;
+  }
+  .SNS .fa,.fa-brands {
+    font-size: 20px;
+  }
+  .SNS-title {
+    text-align: center;
+  }
+}
+@media screen and (max-width:414px) {
+  .wrapper {
+    max-width: 414px;
+    padding: 0 10px;
+  }
+  header {
+    width: auto;
+    height: 110px;
+  }
+  .header {
+    max-width: 414px;
+  }
+  .page-title {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+  .page-title span {
+    font-size: 25px;
+  }
+  .drawer-btn {
+    right: 60px;
+  }
+  .menu a {
+    font-size: 45px;
+    line-height: 80px;
+  }
+  .main-title {
+    font-size: 23px;
+  }
+  .main-title::before,.main-title::after {
+    border-top: 3px solid #D0CECE;
+    content: "";
+    width: 80px;
+  }
+  .About {
+    margin-bottom: 80px;
+  }
+  .About p {
+    font-size: 15px;
+    width: 280px;
+    line-height: 20px;
+  }
+  video {
+    width: 250px;
+    margin: 50px 0 0 70px;
+  }
+  .ActiveDate ul {
+    width: 270px;
+  }
+  .ActiveDate li {
+    font-size: 15px;
+  }
+  footer {
+    width: auto;
+  }
+  footer .page-title {
+    font-size: 10px;
+    padding: 30px 0;
+  }
+  footer .page-title span {
+    font-size: 20px;
+  }
+}
