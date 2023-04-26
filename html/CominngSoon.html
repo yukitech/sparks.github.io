@@ -7,8 +7,8 @@
   <title>明星大学アルティメットフリスビーSPARKS</title>
   <meta name="description" content="このサイトは明星大学アルティメットフリスビーSPARKSのサイトです。どのようなサークルなのか、どんな活動をしているのか紹介しています。">
   <meta name="keywords" content="明星大学,アルティメット,サークル,SPARKS">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="ComingSoon.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/ComingSoon.css">
   <script src="https://kit.fontawesome.com/7972d050b5.js" crossorigin="anonymous"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,23 +22,34 @@
 </script>
 </head>
 <body>
-  <header>
-    <div class="header">
-      <div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header-left">
         <h1 class="page-title">アルティメットフリスビー<br><span>SPARKS</span></h1>
-        <i class="fa fa-bars"></i>
-      </div><!-- /.wrapper -->
-      <input type="checkbox" class="drawer-btn">
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">トップページ</a></li>
-          <li><a href="AboutSPARKS.html">SPARKSについて</a></li>
-          <li><a href="Event.html">イベント紹介</a></li>
-          <li><a href="CominngSoon.html">選手紹介</a></li>
-          <li><a href="Contact.html">連絡先</a></li>
-        </ul>
-      </div><!-- /.menu -->
-    </div><!-- /.header -->
+      </div><!-- /.header-left -->
+
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+    
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+    
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="AboutSPARKS.html">SPARKSについて</a></li>
+            <li><a href="Event.html">イベント紹介</a></li>
+            <li><a href="CominngSoon.html">選手紹介</a></li>
+            <li><a href="Contact.html">連絡先</a></li>
+          </ul>
+        </nav>
+    
+      </div>
+    </div><!-- /.container -->
   </header>
   <main>
     <div class="wrapper">

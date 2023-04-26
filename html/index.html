@@ -7,8 +7,9 @@
   <title>明星大学アルティメットフリスビーSPARKS</title>
   <meta name="description" content="このサイトは明星大学アルティメットフリスビーSPARKSのサイトです。どのようなサークルなのか、どんな活動をしているのか紹介しています。">
   <meta name="keywords" content="明星大学,アルティメット,サークル,SPARKS">
-  <link rel="stylesheet" href="reset.css">
-  <link rel="stylesheet" href="Contact.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="menuClose.js"></script>
   <script src="https://kit.fontawesome.com/7972d050b5.js" crossorigin="anonymous"></script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,25 +23,69 @@
 </script>
 </head>
 <body>
-  <header>
-    <div class="header">
-      <div class="wrapper">
+  <header class="header">
+    <div class="container">
+      <div class="header-left">
         <h1 class="page-title">アルティメットフリスビー<br><span>SPARKS</span></h1>
-        <i class="fa fa-bars"></i>
-      </div><!-- /.wrapper -->
-      <input type="checkbox" class="drawer-btn">
-      <div class="menu">
-        <ul>
-          <li><a href="index.html">トップページ</a></li>
-          <li><a href="AboutSPARKS.html">SPARKSについて</a></li>
-          <li><a href="Event.html">イベント紹介</a></li>
-          <li><a href="CominngSoon.html">選手紹介</a></li>
-          <li><a href="Contact.html">連絡先</a></li>
-        </ul>
-      </div><!-- /.menu -->
-    </div><!-- /.header -->
+      </div><!-- /.header-left -->
+
+      <!-- ハンバーガーメニュー部分 -->
+      <div class="nav">
+    
+        <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+        <input id="drawer_input" class="drawer_hidden" type="checkbox">
+    
+        <!-- ハンバーガーアイコン -->
+        <label for="drawer_input" class="drawer_open"><span></span></label>
+    
+        <!-- メニュー -->
+        <nav class="nav_content">
+          <ul class="nav_list">
+            <li><a href="index.html">トップページ</a></li>
+            <li><a href="AboutSPARKS.html">SPARKSについて</a></li>
+            <li><a href="Event.html">イベント紹介</a></li>
+            <li><a href="CominngSoon.html">選手紹介</a></li>
+            <li><a href="Contact.html">連絡先</a></li>
+          </ul>
+        </nav>
+    
+      </div>
+    </div><!-- /.container -->
   </header>
+  <div class="img-slide">
+    <div class="slide-inner">
+      <div class="slider-item"><img src="../img/slide01.JPG"></div>
+      <div class="slider-item"><img src="../img/slide02.jpg"></div>
+      <div class="slider-item"><img src="../img/slide03.jpg"></div>
+    </div><!-- /.slide-inner -->
+  </div><!-- /.img-slide -->
   <main>
+    <div class="About wrapper">
+      <h2 class="main-title">どんな同好会？</h2>
+      <p>
+        SPARKSはフリスビーを使ったスポーツをガチで楽しむ同好会です!
+        未経験者でもどなたでも大歓迎なので、少しでも興味のある方はぜひTwitterにDMください!
+      </p>
+      <a href="AboutSPARKS.html"><p class="more">さらに詳しく</p></a>
+    </div><!-- /.About -->
+    <div class="Event wrapper">
+      <h2 class="main-title">イベント紹介</h2>
+      <ul>
+        <li>
+          <a href="Event.html#Event01"><img src="../img/Event01.JPG" alt="新歓BBQの写真です"></a>
+          <a href="Event.html#Event01"><p class="Event-title">4月<br>新歓BBQ</p></a>
+        </li>
+        <li>
+          <a href="Event.html#Event02"><img src="../img/Event02.JPG" alt="湘南ビーチアルティメットの写真です"></a>
+          <a href="Event.html#Event02"><p class="Event-title">5月<br>湘南ビーチ</p></a>
+        </li>
+        <li>
+          <a href="Event.html#Event05"><img src="../img/ Event03.JPG" alt="夏合宿の写真です"></a>
+          <a href="Event.html#Event05"><p class="Event-title">8月<br>夏合宿</p></a>
+        </li>
+      </ul>
+      <a href="Event.html"><p class="more">もっと見る</p></a>
+    </div><!-- /.Event -->
     <div class="Contact wrapper" id="Contact">
       <h2 class="main-title">連絡先</h2>
       <div class="Contact-inner">
