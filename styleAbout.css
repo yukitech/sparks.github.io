@@ -335,15 +335,22 @@ footer .page-title {
   .page-title span {
     font-size: 25px;
   }
-  .drawer-btn {
-    right: 60px;
+  .header-left {
+    margin-left: 10px;
+  }
+  .drawer_open {
+    right: 50px;
+  }
+  .nav_list a {
+    font-size: 45px;
+    line-height: 80px;
   }
   .menu a {
     font-size: 45px;
     line-height: 80px;
   }
   .main-title {
-    font-size: 23px;
+    font-size: 21px;
   }
   .main-title::before,.main-title::after {
     border-top: 3px solid #D0CECE;
