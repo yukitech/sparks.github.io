@@ -23,23 +23,19 @@ img {
 }
 header {
   width: 100%;
-  height: 100px;
+  height: 140px;
 }
-.header {
+header .container {
+  display: flex;
+  justify-content: space-between;
   background-color: #FBAA31;
   width: 100%;
   height: 80px;
   position: fixed;
   z-index: 100;
 }
-header .wrapper {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
+.header-left {
+  margin-left: 120px;
 }
 .page-title {
   font-size: 18px;
@@ -50,48 +46,112 @@ header .wrapper {
 .page-title span {
   font-size: 38px;
 }
-.fa-bars {
-  font-size: 45px;
-  margin: 18px 40px 18px 0;
+/* ここから下がハンバーガーメニューに関するCSS */
+  
+/* チェックボックスを非表示にする */
+.drawer_hidden {
+  display: none;
 }
-.menu {
-  background-color: #FBAA31;
-  width: auto;
-  height: 800px;
-  transform: translateY(-100%);
-  position: relative;
-  z-index: 10;
+
+/* ハンバーガーアイコンの設置スペース */
+.drawer_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 160px;
+  top: 40px;
+  z-index: 100;/* 重なり順を一番上にする */
+  cursor: pointer;
+}
+
+/* ハンバーガーメニューのアイコン */
+.drawer_open span,
+.drawer_open span:before,
+.drawer_open span:after {
+  content: '';
+  display: block;
+  height: 6px;
+  width: 50px;
+  border-radius: 3px;
+  background: #333;
   transition: 0.5s;
+  position: absolute;
 }
-.menu ul {
+
+/* 三本線の一番上の棒の位置調整 */
+.drawer_open span:before {
+  bottom: 15px;
+}
+
+/* 三本線の一番下の棒の位置調整 */
+.drawer_open span:after {
+  top: 15px;
+}
+
+/* アイコンがクリックされたら真ん中の線を透明にする */
+#drawer_input:checked ~ .drawer_open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* アイコンがクリックされたらアイコンが×印になように上下の線を回転 */
+#drawer_input:checked ~ .drawer_open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+
+#drawer_input:checked ~ .drawer_open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+  
+/* メニューのデザイン*/
+.nav_content {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 100%;
+  left: 0%; /* メニューを画面の外に飛ばす */
+  z-index: 99;
+  background: #FBAA31;
+  transition: .5s;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.nav_list {
+  margin-top: 100px;
+}
+
+.nav_list ul {
   padding-top: 100px;
 }
-.menu li {
+.nav_list li {
   text-align: center;
 }
-.menu a {
+.nav_list a {
   font-size: 70px;
   color: white;
   line-height: 110px;
 }
-.menu a:hover {
+.nav_list a:hover {
   border-bottom: 5px solid white;
   transition: 0.3s;
 }
-.drawer-btn {
-  transform: scale(10);
-  position: absolute;
-  z-index: 110;
-  top: 30px;
-  right: 170px;
-  opacity: 0;
+
+/* メニュー黒ポチを消す */
+.nav_list {
+  list-style: none;
 }
-.drawer-btn:checked ~ .menu{
-  transform: translateY(10%);
-  transition: 0.5s;
+
+.nav_item a {
+  color: #fff;
+  text-decoration: none;
 }
-main {
-  margin-top: 50px;
+
+/* アイコンがクリックされたらメニューを表示 */
+#drawer_input:checked ~ .nav_content {
+  bottom: 0;/* メニューを画面に入れる */
 }
 .main-title {
   display: flex;
@@ -111,32 +171,39 @@ main {
 .main-title::after {
   margin-left: 10px; 
 }
-.Event {
-  margin-top: 50px;
+.About {
+  margin-bottom: 150px;
 }
-.Event ul {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
-.Event ul p {
-  padding-top: 10px;
+.About p {
   font-size: 24px;
-  text-align: center;
-  line-height: 34px;
-}
-.Event img {
-  object-fit: cover;
-  width: 350px;
-  height: 300px;
-}
-.Event .Event-desc {
-  margin: 30px 0 80px 0;
-  width: 350px;
-  line-height: 40px;
+  width: 800px;
   text-align: justify;
   text-justify: inter-ideograph;
+  line-height: 40px;
+  margin: 20px auto 0 auto;
+}
+.ActiveDate ul {
+  text-align: justify;
+  text-justify: inter-ideograph;
+  width: 800px;
+  margin: 50px auto 0 auto;
+}
+.ActiveDate li {
+  font-size: 24px;
+  line-height: 35px;
+  background: url(img/frisbeeIcon.png) left 0px top 4px no-repeat;
+  padding-left: 50px;
+  background-size: 50px auto;
+}
+.ActiveDate span img {
+  width: 80px;
+}
+video {
+  width: 700px;
+  margin: 80px 0 0 240px;
+  border-radius: 8%;
+  position: relative;
+  z-index: 1;
 }
 footer {
   background-color: #FFF2C1;
@@ -215,24 +282,21 @@ footer .page-title {
     content: "";
     width: 200px;
   }
-  .Event ul {
-    flex-direction: column;
-    align-items: center;
-  }
-  .Event ul p {
-    padding: 10px 0 30px 0;
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .Event img {
-    width: 300px;
-    height: 300px;
-  }
-  .Event .Event-desc {
-    margin: 0 0 20px 0;
+  .About p {
+    font-size: 22px;
+    width: 460px;
     line-height: 30px;
-    width: 300px;
-  } 
+  }
+  video {
+    width: 500px;
+    margin: 80px 0 0 120px;
+  }
+  .ActiveDate ul {
+    width: 600px;
+  }
+  .ActiveDate li {
+    font-size: 22px;
+  }
   footer .page-title {
     font-size: 14px;
     padding: 25px 0;
@@ -286,11 +350,23 @@ footer .page-title {
     content: "";
     width: 80px;
   }
-  .Event .main-title::before{
-    width: 90px;
+  .About {
+    margin-bottom: 80px;
   }
-  .Event .main-title::after {
-    width: 90px;
+  .About p {
+    font-size: 15px;
+    width: 280px;
+    line-height: 20px;
+  }
+  video {
+    width: 250px;
+    margin: 50px 0 0 70px;
+  }
+  .ActiveDate ul {
+    width: 270px;
+  }
+  .ActiveDate li {
+    font-size: 15px;
   }
   footer {
     width: auto;
